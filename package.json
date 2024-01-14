@@ -21,8 +21,8 @@
   "homepage": "https://github.com/xwmtp/oot-bingo-playground#readme",
   "dependencies": {
     "oot-bingo-generator": "^1.0.8",
-    "oot-bingo-lists": "^1.4.0",
-    "oot-bingo-tools": "^1.2.0"
+    "oot-bingo-lists": "^2.0.1",
+    "oot-bingo-tools": "^1.2.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
