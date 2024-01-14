@@ -1,8 +1,11 @@
-import {
-  analyzeFrequencies,
-  printFrequencies,
-} from "oot-bingo-generator/build/analysis/frequencyAnalysis";
+import { analyzeFrequencies, printChangeLog } from "oot-bingo-tools";
 import { getBingoList } from "oot-bingo-lists";
 
-const frequencies = analyzeFrequencies(1000, getBingoList("v9.3"), "normal");
-printFrequencies(frequencies);
+async function main() {
+  const frequencyResult = await analyzeFrequencies(getBingoList("v10.4"), 1000, "normal");
+  console.log(`Average iterations: ${frequencyResult.meta.iterations.average}`);
+
+  printChangeLog(getBingoList("v10.3.2").normal, getBingoList("v10.4").normal);
+}
+
+main().then();
